@@ -1,0 +1,304 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<title>MercadoLibre: <%=h @item.titulo %>  - $ 1100.00</title>
+
+<base href="http://www.mercadolibre.com.ar/argentina/ml/">
+<link rel="stylesheet" href="http://www.mercadolibre.com.ar/jm/ml.api.webcomponent.CascadingStyleSheetsController?name=VIP3&visualId=STD&templateID=C_CI_TEMPLATE" type="text/css"> 
+<script src="http://www.mercadolibre.com.ar/jm/ml.api.webcomponent.JavaScriptController?name=VIP3&visualId=STD&v=20081007.js"></script>
+<style>
+
+.ver_plan {
+	font-size:11px;
+
+}
+
+.tarjeta-diners , .tarjeta-master , .tarjeta-amex , .tarjeta-tnaranja , .tarjeta-magna , .tarjeta-hipercard , .tarjeta-aura , .tarjeta-visa , .tarjeta-acard, .tarjeta-presto, .tarjeta-bradesco {
+			background-image:url('http://www.mercadolibre.com/org-img/vip3/tarjetas.gif');
+			background-repeat:no-repeat;
+			display : inline ;
+			float : left;
+			width :26px;
+			height:16px;
+			list-style : none;
+margin-left : 3px;
+
+}
+			
+.tarjeta-diners {	background-position: 0 -30px;}
+.tarjeta-master {	background-position: 0 -76px;}
+.tarjeta-amex   { background-position: 0 -122px; } 
+.tarjeta-tnaranja { background-position: 0 -168px; } 
+.tarjeta-magna { background-position: 0 -214px; } 
+.tarjeta-hipercard { background-position: 0 -260px; } 
+.tarjeta-aura { background-position: 0 -306px; } 
+.tarjeta-visa { background-position: 0 -352px; } 
+.tarjeta-acard { background-position: 0 -398px; }
+.tarjeta-presto { background-position: 0 -444px; }
+.tarjeta-bradesco { background-position: 0 -490px; }
+</style>
+
+<script>
+var valItemId = "##ITEM_ID##";
+var valItemSite = "MLA";
+var visualId = "STD";
+var urlBaseSite = "http://www.mercadolibre.com.ar/";
+var urlDefault = "http://www.mercadolibre.com.ar/argentina/ml/";
+var urlBase = "http://"+window.location.host;
+var oldUrl = "http://www.mercadolibre.com.ar/jm/item?site=MLA&id=##ITEM_ID##";
+var urlLastCategPath = "";
+var categId= "##CATEG_ID##";
+var productId = "0";
+var valBidSeq = "##VAL_BID_SEQ##";
+var urlJSSL = "##URL_JSSL##";
+var cantFotosCargadas = 0;
+var vid = "";
+var totalFotos = 0;
+var srcMainImg = "http://www.mercadolidesa.com.ar/jm/img?s=MLA&f=artsinfoto.gif&v=E";
+var rotacionDeImagenes = false;
+
+</script>
+<script language="javascript">
+	var atlasPoolSufix = "_PA";
+    var urlBaseAtlas = "";
+    var atlasPoolSufixForRegInt = "_PA";
+</script>
+<script>
+var urlBase = "http://"+window.location.host;
+
+var contentIsEnabled	= true;
+var autocenterIsEnabled	= true;
+var loadingIsEnabled	= true;
+
+var cnt_width  = '790px';
+var cnt_src    = urlBase+'/jm/item?act=confirmBid&vip3=Y&id=##ITEM_ID##&site=MLA';
+var img_src    = '/org-img/vip3/layer/loading230x180.gif';
+
+var loading_width  = '230px';
+var loading_height = '180px';
+
+//var loading_width  = '32' + 'px'
+//var loading_height = '32' + 'px'
+
+var image = new Image();
+image.src = '/org-img/vip3/layer/loading230x180.gif';
+
+</script>
+</head>
+
+<body>
+<center>
+<div id="containall">
+	##MENU##
+	<div class="BigContainer"> 
+    <div id="pathcateg"> 
+      
+
+      <div class="breadcrumb"> ##CATEG_PATH## </div> 
+
+    </div> 
+
+    <!-- PREHEADER --> 
+    <div></div> 
+    <!-- TITULO DEL ITEM --> 
+
+<div id="boxgral">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="41%" rowspan="2" align="center" valign="top">
+<div class="marcofoto">
+
+<style>
+div.float {
+  float: left; padding: 2px;
+ }
+.imageOver{
+	background:url(/org-img/vip3/visor/zoomB.gif) no-repeat 50% 50%;	
+	filter:alpha(opacity=80);
+	-moz-opacity: 0.8;
+	-khtml-opacity: 0.8;
+	opacity: 0.8;	
+}
+</style>
+<!--
+****************************************************************************************************************
+					VISOR HTML
+****************************************************************************************************************
+-->
+<script>
+var maxSize;
+var preImg;
+
+function setMaxWidth(){
+	preImg = new Image();
+	
+	preImg.onload = preLoadMaxSize;
+	preImg.src = srcMainImg;
+}
+
+function preLoadMaxSize(){
+	maxSize = preImg.width;
+	document.getElementById("mainImg").width = maxSize;
+}
+
+function moveToTope(){window.scroll(0,0);}
+
+</script>
+<table align="center" class="photoframe">
+	<tr>
+		<td align="center" width="280" height="280" id="tdMainImg">
+			<div id="divMainImg" style="display:inline">
+			<a href="javascript:showVisor()" id="linkMainImg">
+				<img src="http://www.mercadolibre.com.ar/jm/img?s=MLA&f=<%=h @item.image%>&v=E" id="mainImg" border="none" align="top" alt="<%=h @item.titulo %>" title="<%=h @item.titulo %>"/>
+			</a>
+			</div>
+		
+		</td>
+	</tr>
+</table>
+
+</div></td>
+<td width="59%" valign="top" style="padding:0 5px 0 10px;">
+
+<h1><%=h @item.titulo %></h1>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="16%" height="25">Precio:</td>
+<td width="84%" valign="middle"><span class="price"><span id="actPrice">##PRICE_SYMBOL## ##PRICE##</span></span><span class="fontGrey"> ##ITEM_TYPE##</span></td>
+</tr>
+<tr>
+</tr>
+<tr>
+<td height="25">Ubicación:</td>
+<td>##LOCATION##</td>
+</tr>
+
+<tr>
+<td height="25" valign=top><div id="endtxt1"></div></td>
+<td height="25" valign=top><div id="endtxt2"><span class="font11Grey" id="endtxt3"></span></div>
+<div style="margin-top: 8px;"></div>
+<div class="purchase"><input type="button" id="BidButtonTop" class="but_pri_1" value="Comprar" title="Comprar"></div>
+ <span class="font11">Tu compra está protegida.</span></td>
+</tr>
+</table>
+<div class="dashed"></div>
+
+<div class="box">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr>
+<td style="padding-top: 2px;" valign="top" width="16%">Vendedor: </td>
+<td class="datavend" valign="top" width="84%">
+
+<div><span id="Nickname">	<span id="MyNickname" style="margin-top: 5px; display: inline; float: left; padding-bottom: 2px;">
+		 <%= @customer.nickname %>  
+	</span>
+<span title="">
+
+</span><div style="clear: both;"></div>
+</span>
+</div>
+<span class="font11" style="clear: both;"><div id="CalifPercentage" style="width: auto; clear: both;"><div id="puntos">Calificación del vendedor: 
+	##SELLER_POINT## puntos
+</div>
+
+
+
+<div id="posneg"> 
+    <div id="caja_pos"> 
+    	<span id="link_pos">(##POS_CALIF##%</span> 
+		<span id="img_pos" class="pos"></span>)
+    </div>
+    <div id="caja_neg"> 
+	<span id="link_neg">(##NEG_CALIF##%</span> 
+	<span id="img_neg" class="neg"/></span>)
+	</div> 
+</div></div>
+<br>
+<div style="clear: both;">
+Ventas de este artículo: ##BIDS_COUNT## <a href=""></a>
+</div>
+<br />
+</span></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="font11 denunhd">Publicación ###ITEM_ID##</div>
+<div id="tabsN">
+	<ul id="description">
+		<li group="description" class="TabbedPanelsTab" id="current">
+			<a href="javascript:showTab('Descripción','descriptionCont');cambiarEstilos('HDescripción',0,'description')"><span>Descripción</span></a>
+		</li>
+	</ul>
+</div>
+<div id="descriptionCont">
+	<div class="contentbox" id="Descripción">##DESCRIPTION##<!----></div>
+</div>
+</div>
+<!--   -->
+    <div name="attr_help" class="LayerAyuda"><div  id='MLID' class="caja_ayu_gral" onMouseOut="javascript:delayHide();" onMouseOver="javascript:deleteDelayHide();">
+	<div class="caja_ayu_flecha"></div>
+   	<div class="caja_ayu_cont">
+    	<!-- contenido -->
+        <div >
+			<div class="caja_ayu_title">
+				<div >MercadoLíder</div>
+			    <div class="caja_ayu_close"><a href="javascript:hideHelp();" onclick="hideHelp();"><div class="caja_ayu_ico_close"></div></a></div>
+    			<div ></div>
+			</div>
+		<div style="margin: 0px 10px;">
+                <div style="font-size:11px;">Los MercadoLíderes son grandes vendedores. Tienen una confiabilidad de más del 94% y más de 100 puntos en operaciones.</div>
+    </div>
+    <div class="borra"></div>
+</div>
+</div>
+<div class="borra"></div>
+</div><div  id='GOLD' class="caja_ayu_gral" onMouseOut="javascript:delayHide();" onMouseOver="javascript:deleteDelayHide();">
+	<div class="caja_ayu_flecha"></div>
+   	<div class="caja_ayu_cont">
+    	<!-- contenido -->
+        <div >
+			<div class="caja_ayu_title">
+				<div >MercadoLíder Gold</div>
+			    <div class="caja_ayu_close"><a href="javascript:hideHelp();" onclick="hideHelp();"><div class="caja_ayu_ico_close"></div></a></div>
+    			<div ></div>
+			</div>
+		<div style="margin: 0px 10px;">
+                <div style="font-size:11px;">Los MercadoLíderes Gold son grandes vendedores. Tienen una confiabilidad de más del 97% y más de 500 puntos en operaciones.</div>
+    </div>
+    <div class="borra"></div>
+</div>
+</div>
+<div class="borra"></div>
+</div><div  id='PLAT' class="caja_ayu_gral" onMouseOut="javascript:delayHide();" onMouseOver="javascript:deleteDelayHide();">
+	<div class="caja_ayu_flecha"></div>
+   	<div class="caja_ayu_cont">
+    	<!-- contenido -->
+        <div >
+			<div class="caja_ayu_title">
+				<div >MercadoLíder Platinum</div>
+			    <div class="caja_ayu_close"><a href="javascript:hideHelp();" onclick="hideHelp();"><div class="caja_ayu_ico_close"></div></a></div>
+    			<div ></div>
+			</div>
+		<div style="margin: 0px 10px;">
+                <div style="font-size:11px;">Los MercadoLíderes Platinum son los mejores vendedores del sitio. Tienen una confiabilidad de más del 98% y más de 1000 puntos en operaciones.</div>
+    </div>
+    <div class="borra"></div>
+</div>
+</div>
+<div class="borra"></div>
+</div>
+
+</div> 
+ 
+##FOOTER##
+</div>
+</center>
+</body>
+</html>
