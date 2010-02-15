@@ -91,7 +91,32 @@ image.src = '/org-img/vip3/layer/loading230x180.gif';
 <body>
 <center>
 <div id="containall">
-	##MENU##
+	<!--##MENU## -->
+	<div class="under" id="contmenu"> 
+  <div class="menu_der"> 
+    <div id="first_lnk_menu_der"><a href="/">Inicio</a></div>
+	<script>setLog();</script> 
+    <div class="lnk_menu_der"><a href="/ayuda_home">Ayuda</a></div> 
+    <div class="lnk_menu_der"><a href="/jm/myML">Mi MercadoLibre</a></div> 
+    <div class="lnk_menu_der"><a href="/jm/sell">Vender</a></div> 
+    <div class="lnk_menu_der"><a target="_blank" href="/jm/reg">Reg&iacute;strate</a></div> 
+  </div> 
+  <div class="borra"></div> 
+  <div class="flota_izq"><a href="/"> 
+    <div class="logo_ml"></div> 
+    </a></div> 
+  <div class="menu_der"> 
+    <div id="bg_menu"> 
+      <div id="cont_buscador"> 
+        <input type="text" onfocus="javascript:setFocus()" onblur="javascript:setBlur()" value="" maxlength="60" id="as_inner_word" name="as_word" class="buscador"> 
+      </div> 
+      <div id="bot_buscar"> 
+        <input type="submit" class="buscar" value="" onclick="innerSearch();"> 
+      </div> 
+    </div> 
+  </div> 
+</div>
+<!--##MENU## -->
 	<div class="BigContainer"> 
     <div id="pathcateg"> 
       
@@ -172,7 +197,7 @@ function moveToTope(){window.scroll(0,0);}
 <tr>
 </tr>
 <tr>
-<td height="25">Ubicación:</td>
+<td height="25">Ubicaci&oacute;n:</td>
 <td>##LOCATION##</td>
 </tr>
 
@@ -181,7 +206,7 @@ function moveToTope(){window.scroll(0,0);}
 <td height="25" valign=top><div id="endtxt2"><span class="font11Grey" id="endtxt3"></span></div>
 <div style="margin-top: 8px;"></div>
 <div class="purchase"><input type="button" id="BidButtonTop" class="but_pri_1" value="Comprar" title="Comprar"></div>
- <span class="font11">Tu compra está protegida.</span></td>
+ <span class="font11">Tu compra est&aacute; protegida.</span></td>
 </tr>
 </table>
 <div class="dashed"></div>
@@ -200,7 +225,7 @@ function moveToTope(){window.scroll(0,0);}
 </span><div style="clear: both;"></div>
 </span>
 </div>
-<span class="font11" style="clear: both;"><div id="CalifPercentage" style="width: auto; clear: both;"><div id="puntos">Calificación del vendedor: 
+<span class="font11" style="clear: both;"><div id="CalifPercentage" style="width: auto; clear: both;"><div id="puntos">Calificaci&oacute;n del vendedor: 
 	##SELLER_POINT## puntos
 </div>
 
@@ -218,7 +243,7 @@ function moveToTope(){window.scroll(0,0);}
 </div></div>
 <br>
 <div style="clear: both;">
-Ventas de este artículo: ##BIDS_COUNT## <a href=""></a>
+Ventas de este art&iacute;culo: ##BIDS_COUNT## <a href=""></a>
 </div>
 <br />
 </span></td>
@@ -229,11 +254,11 @@ Ventas de este artículo: ##BIDS_COUNT## <a href=""></a>
 </tr>
 </table>
 </div>
-<div class="font11 denunhd">Publicación ###ITEM_ID##</div>
+<div class="font11 denunhd">Publicaci&oacute;n ###ITEM_ID##</div>
 <div id="tabsN">
 	<ul id="description">
 		<li group="description" class="TabbedPanelsTab" id="current">
-			<a href="javascript:showTab('Descripción','descriptionCont');cambiarEstilos('HDescripción',0,'description')"><span>Descripción</span></a>
+			<a href="javascript:showTab('Descripción','descriptionCont');cambiarEstilos('HDescripción',0,'description')"><span>Descripci&oacute;n</span></a>
 		</li>
 	</ul>
 </div>
@@ -297,7 +322,20 @@ Ventas de este artículo: ##BIDS_COUNT## <a href=""></a>
 
 </div> 
  
-##FOOTER##
+<!-- ##FOOTER## -->
+<div id="footer_cont"> 
+  <div class="footer_reng"> 
+    
+    
+  </div> 
+  <div class="footer_reng"><a href="http://www.mercadolibre.com.ar/argentina/ml/org_theme.p_main?as_theme_id=NEW_SOBRE_ML">Sobre MercadoLibre</a> | <a href="http://www.mercadolibre.com.ar/sitemap.html">Mapa del Sitio</a> | <a href="http://www.mercadolibre.com.ar/seguro_home.html">Pol&iacute;ticas</a> | <a href="http://www.mercadolibre.com.ar/argentina/ml/p_loadhtml?as_menu=CSEG&amp;as_html_code=CSEG01">Centro de Seguridad</a> | <a href="http://www.mercadopago.com/argentina/ml/p_loadhtml?as_menu=M06S03&amp;as_html_code=PROTECCION_COMPRADOR">Programa de Protecci&oacute;n al Comprador</a> | <a href="http://opinion.mercadolibre.com.ar">Opiniones y Cat&aacute;logo</a></div> 
+  
+<div align="center" class="footer_reng"><b>Argentina</b> | <a href="http://www.mercadolivre.com.br">Brasil</a> | <a href="http://www.mercadolibre.com.co">Colombia</a> | <a href="http://www.mercadolibre.co.cr">Costa Rica</a> | <a href="http://www.mercadolibre.cl">Chile</a> | <a href="/jm/ml.track.me?k1=FOOT&amp;k2=EBAY&amp;go=http://www.ebay.com/">eBay</a> | <a href="http://www.mercadolibre.com.ec">Ecuador</a> | <a href="http://www.mercadolibre.com.mx">M&eacute;xico</a> | <a href="http://www.mercadolibre.com.pa">Panam&aacute;</a> | <a href="http://www.mercadolibre.com.pe">Per&uacute;</a> | 
+  <a href="http://www.mercadolibre.com.do">Rep. Dominicana</a> | <a href="http://www.mercadolibre.com.uy">Uruguay</a> | <a href="http://www.mercadolibre.com.ve">Venezuela</a></div>
+<div id="footer_fin">El uso de este sitio web implica la aceptaci&oacute;n de los <a target="_blank" href="http://www.mercadolibre.com.ar/seguro_terminos.html">T&eacute;rminos y Condiciones</a> y de las <a href="http://www.mercadolibre.com.ar/org-img/html/MLA/seguro_privacidad.html">Pol&iacute;ticas de Privacidad</a> de MercadoLibre S.A.<br> 
+    Copyright &copy; 1999-2010 MercadoLibre S.A.</div> 
+</div>
+<!-- ##FOOTER## -->
 </div>
 </center>
 </body>
