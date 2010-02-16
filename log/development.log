@@ -984,3 +984,476 @@ Processing ItemController#show (for 200.5.119.154 at 2010-02-15 13:47:34) [GET]
   [4;35;1mCustomer Load (0.2ms)[0m   [0mSELECT * FROM `customers` WHERE (`customers`.`id` = 1) [0m
 Rendering item/show
 Completed in 64ms (View: 29, DB: 2) | 200 OK [http://ec2-75-101-186-222.compute-1.amazonaws.com/item/show/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCREATE DATABASE `railsvip_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (38.5ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateCustomers (20100215180526)
+  [4;35;1mSQL (0.8ms)[0m   [0mCREATE TABLE `customers` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nickname` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100215180526')[0m
+Migrating to CreateItems (20100215180752)
+  [4;35;1mSQL (21.0ms)[0m   [0mCREATE TABLE `items` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `image` varchar(255), `titulo` varchar(255), `customer_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100215180752')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mdescribe `customers`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `customers`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `items`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `items`[0m
+
+
+Processing ItemController#show (for 200.5.119.154 at 2010-02-15 13:53:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mItem Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+
+
+ActiveRecord::RecordNotFound (Couldn't find Item with ID=1):
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/base.rb:1528:in `find_one'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/base.rb:1511:in `find_from_ids'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/base.rb:590:in `find'
+    /app/controllers/item_controller.rb:3:in `show'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (80.0ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (0.7ms)
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing CustomersController#index (for 200.5.119.154 at 2010-02-15 13:53:36) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mCustomer Load (0.2ms)[0m   [0;1mSELECT * FROM `customers` [0m
+Rendering template within layouts/customers
+Rendering customers/index
+Completed in 60ms (View: 54, DB: 0) | 200 OK [http://ec2-184-73-6-124.compute-1.amazonaws.com/customers/]
+
+
+Processing CustomersController#new (for 200.5.119.154 at 2010-02-15 13:53:39) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mCustomer Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `customers`[0m
+Rendering template within layouts/customers
+Rendering customers/new
+Completed in 37ms (View: 31, DB: 1) | 200 OK [http://ec2-184-73-6-124.compute-1.amazonaws.com/customers/new]
+
+
+Processing CustomersController#create (for 200.5.119.154 at 2010-02-15 13:53:45) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"468aebe1df66ad62e81697eb194ca61e8d141229", "customer"=>{"nickname"=>"matata"}}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mCustomer Columns (20.5ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCustomer Create (0.2ms)[0m   [0;1mINSERT INTO `customers` (`updated_at`, `nickname`, `created_at`) VALUES('2010-02-15 18:53:45', 'matata', '2010-02-15 18:53:45')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Redirected to #<Customer:0xb6718660>
+Completed in 29ms (DB: 21) | 302 Found [http://ec2-184-73-6-124.compute-1.amazonaws.com/customers]
+
+
+Processing CustomersController#show (for 200.5.119.154 at 2010-02-15 13:53:47) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mCustomer Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mCustomer Load (0.2ms)[0m   [0mSELECT * FROM `customers` WHERE (`customers`.`id` = 1) [0m
+Rendering template within layouts/customers
+Rendering customers/show
+Completed in 49ms (View: 26, DB: 1) | 200 OK [http://ec2-184-73-6-124.compute-1.amazonaws.com/customers/1]
+
+
+Processing CustomersController#index (for 200.5.119.154 at 2010-02-15 13:54:01) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mCustomer Load (0.3ms)[0m   [0;1mSELECT * FROM `customers` [0m
+Rendering template within layouts/customers
+Rendering customers/index
+  [4;35;1mCustomer Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `customers`[0m
+Completed in 141ms (View: 6, DB: 1) | 200 OK [http://ec2-184-73-6-124.compute-1.amazonaws.com/customers]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mItem Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mItem Create (0.2ms)[0m   [0;1mINSERT INTO `items` (`updated_at`, `titulo`, `customer_id`, `image`, `created_at`) VALUES('2010-02-15 18:56:44', 'titulito', 1, '61466666_7940.jpg', '2010-02-15 18:56:44')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+
+
+Processing ItemController#show (for 200.5.119.154 at 2010-02-15 13:57:00) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mItem Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+  [4;36;1mCustomer Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mCustomer Load (0.1ms)[0m   [0mSELECT * FROM `customers` WHERE (`customers`.`id` = 1) [0m
+Rendering item/show
+Completed in 74ms (View: 31, DB: 2) | 200 OK [http://ec2-184-73-6-124.compute-1.amazonaws.com/item/show/1]
+
+
+Processing CustomersController#index (for 200.5.119.154 at 2010-02-15 14:02:24) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mCustomer Load (0.2ms)[0m   [0;1mSELECT * FROM `customers` [0m
+Rendering template within layouts/customers
+Rendering customers/index
+  [4;35;1mCustomer Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `customers`[0m
+Completed in 62ms (View: 6, DB: 1) | 200 OK [http://ec2-184-73-6-124.compute-1.amazonaws.com/customers]
+
+
+Processing ItemController#show (for 200.42.23.2 at 2010-02-15 14:06:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mItem Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+  [4;36;1mCustomer Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mCustomer Load (0.1ms)[0m   [0mSELECT * FROM `customers` WHERE (`customers`.`id` = 1) [0m
+Rendering item/show
+Completed in 58ms (View: 29, DB: 1) | 200 OK [http://ec2-184-73-6-124.compute-1.amazonaws.com/item/show/1]
+
+
+Processing ItemController#show (for 206.53.153.121 at 2010-02-15 14:09:07) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mItem Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+  [4;36;1mCustomer Columns (0.3ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mCustomer Load (0.1ms)[0m   [0mSELECT * FROM `customers` WHERE (`customers`.`id` = 1) [0m
+Rendering item/show
+Completed in 56ms (View: 37, DB: 1) | 200 OK [http://ec2-184-73-6-124.compute-1.amazonaws.com/item/show/1]
+
+
+Processing ApplicationController#index (for 85.17.213.95 at 2010-02-15 23:55:51) [GET]
+
+
+ActionController::RoutingError (No route matches "//phpmyadmin//scripts/setup.php" with {:method=>:get}):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ApplicationController#index (for 85.17.213.95 at 2010-02-15 23:55:52) [GET]
+
+
+ActionController::RoutingError (No route matches "//phpMyAdmin//scripts/setup.php" with {:method=>:get}):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ItemController#show (for 200.42.23.2 at 2010-02-16 09:44:20) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mItem Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+  [4;36;1mCustomer Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mCustomer Load (0.1ms)[0m   [0mSELECT * FROM `customers` WHERE (`customers`.`id` = 1) [0m
+Rendering item/show
+Completed in 70ms (View: 12, DB: 1) | 200 OK [http://ec2-184-73-6-124.compute-1.amazonaws.com/item/show/1]
+
+
+Processing ItemController#show (for 200.42.23.2 at 2010-02-16 10:07:00) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mItem Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+  [4;36;1mCustomer Columns (0.3ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mCustomer Load (0.1ms)[0m   [0mSELECT * FROM `customers` WHERE (`customers`.`id` = 1) [0m
+Rendering item/show
+Completed in 132ms (View: 102, DB: 1) | 200 OK [http://ec2-184-73-6-124.compute-1.amazonaws.com/item/show/1]
+
+
+Processing ItemController#show (for 200.42.23.2 at 2010-02-16 10:07:29) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mItem Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+  [4;36;1mCustomer Columns (0.3ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mCustomer Load (0.1ms)[0m   [0mSELECT * FROM `customers` WHERE (`customers`.`id` = 1) [0m
+Rendering item/show
+Completed in 56ms (View: 35, DB: 1) | 200 OK [http://ec2-184-73-6-124.compute-1.amazonaws.com/item/show/1]
+
+
+Processing ItemController#show (for 200.42.23.2 at 2010-02-16 10:09:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mItem Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+  [4;36;1mCustomer Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mCustomer Load (0.1ms)[0m   [0mSELECT * FROM `customers` WHERE (`customers`.`id` = 1) [0m
+Rendering item/show
+Completed in 81ms (View: 25, DB: 1) | 200 OK [http://ec2-184-73-6-124.compute-1.amazonaws.com/item/show/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCustomers (20100215180526)
+Migrating to CreateItems (20100215180752)
+Migrating to AddDescriptionToItem (20100216152131)
+  [4;36;1mSQL (30.0ms)[0m   [0;1mALTER TABLE `items` ADD `description` text[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100216152131')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW FIELDS FROM `customers`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mdescribe `customers`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `customers`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `items`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `items`[0m
+
+
+Processing ItemController#show (for 200.42.23.2 at 2010-02-16 10:37:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mItem Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+  [4;36;1mCustomer Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mCustomer Load (0.1ms)[0m   [0mSELECT * FROM `customers` WHERE (`customers`.`id` = 1) [0m
+Rendering item/show
+Completed in 69ms (View: 12, DB: 1) | 200 OK [http://ec2-184-73-6-124.compute-1.amazonaws.com/item/show/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM `items` [0m
+  [4;35;1mItem Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItem Update (0.8ms)[0m   [0mUPDATE `items` SET `description` = '<br>\n<center>\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"700\">\n<tbody>\n<tr bgcolor=\"#000000\">\n<td colspan=\"3\" height=\"1\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td></tr>\n<tr bgcolor=\"#f0f0f0\">\n<td colspan=\"3\" height=\"10\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"10\" width=\"1\"></td></tr>\n<tr bgcolor=\"#f0f0f0\">\n<td width=\"10\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td valign=\"top\" width=\"120\"><img alt=\" IPHONE 3G FILM PROTECTOR DE PANTALLA ESPEJADO-TOUCH-NANO\" src=\"http://www.mercadolibre.com.ar/jm/img?s=MLA&amp;f=CAT_318700_1.jpg&amp;v=G\" height=\"110\" width=\"110\"></td>\n<td style=\"font-size: 12px; color: rgb(51, 51, 153); font-family: Arial;\">Pelicula protectora para proteger la pantalla de tu celular espejada cuando la pantalla está inactiva y transparente cuando está activa.</td></tr>\n<tr bgcolor=\"#f0f0f0\">\n<td colspan=\"3\" height=\"10\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"10\" width=\"1\"></td></tr>\n<tr>\n\n<td colspan=\"3\" height=\"10\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td></tr>\n<tr bgcolor=\"#fff38a\">\n<td><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td colspan=\"3\"><b style=\"color: rgb(44, 43, 51);\">Características</b></td></tr>\n<tr bgcolor=\"#dedede\">\n<td colspan=\"3\" height=\"1\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td></tr>\n<tr>\n<td colspan=\"3\" height=\"5\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td></tr></tbody></table></center>\n<center>\n<table id=\"DESC\" style=\"font-size: 11px; color: rgb(51, 51, 153); font-family: Arial;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"700\">\n<tbody>\n<tr>\n<td height=\"1\" width=\"10\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td width=\"120\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td width=\"5\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td width=\"220\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n\n<td width=\"5\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td width=\"10\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td width=\"120\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td width=\"5\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td width=\"220\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td width=\"5\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td></tr>\n<tr valign=\"top\">\n<td bgcolor=\"#f2f2f2\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td bgcolor=\"#f2f2f2\">Protector de pantalla:</td>\n<td><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td>Espejado</td>\n<td><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td bgcolor=\"#f2f2f2\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td bgcolor=\"#f2f2f2\"></td>\n<td><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n\n<td></td>\n<td><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td></tr>\n<tr bgcolor=\"#999999\">\n<td colspan=\"10\" height=\"1\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td></tr></tbody></table></center>\n<center><br><br></center>\n<center><img style=\"width: 255px; height: 168px;\" src=\"http://www.electronixplanet.net/banners/httpwww.electronixplanet.netventaslogofin.jpg.jpg\" height=\"297\" width=\"261\"></center>\n<center>&nbsp;</center><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong>\n</strong></font><center><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong><font size=\"7\" color=\"#003399\" face=\"Verdana\"><strong>FILM</strong></font></strong></font></center>\n<center><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong><font size=\"7\" color=\"#000000\">ESPEJADO</font></strong></font></center>\n<center><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong>&nbsp;IPHONE 3ra Generacion</strong></font></center>\n<center><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong>&nbsp;</strong></font></center>\n<center><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong><img src=\"http://store.macnificos.com/ebay/plantillas/new_design/product/mirrorfilm2.jpg\" height=\"565\" width=\"549\"></strong></font></center>\n<center><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong>\n<p align=\"center\"><a href=\"http://eshops.mercadolibre.com.ar/electronixargentina/listado/IPOD_OrderId_BARATOS_DisplayType_G\"></a></p></strong></font><font color=\"#ff6600\">NO DEJA MARCAS DE DEDOS, </font></strong></font></center>\n\n<center><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong><font color=\"#ff6600\">NO RAYA</font></strong></font></center>\n<center><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong><font color=\"#ff6600\"></font>&nbsp;</strong></font></center>\n<center><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong><img alt=\"FILM PROTECTOR PANTALLA IPHONE 3G\" src=\"http://www.mercadolibre.com.ar/jm/img?s=MLA&amp;f=44604487_8258.jpg&amp;v=P\" align=\"absMiddle\" border=\"0\"></strong></font></center>\n<center><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong><font color=\"#ff6600\">CLARIDAD OPTIMA E INVISIBLE!</font></strong></font></center>\n<center><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong><font color=\"#ff6600\"></font>&nbsp;</strong></font></center>\n<center><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong><font size=\"1\"></font>&nbsp;</strong></font></center>\n<center><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong><img alt=\"FILM PROTECTOR PANTALLA IPHONE 3G\" src=\"http://www.mercadolibre.com.ar/jm/img?s=MLA&amp;f=39846695_7595.jpg&amp;v=P\" align=\"absMiddle\" border=\"0\"></strong></font></center>\n<center><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong>cortado y calado </strong></font></center>\n<center><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong>(RUEDA Y AUDIFONO)</strong></font></center>\n<center><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong>CON TOALLA DE GAMUZA</strong></font></center>\n<center><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong>CERRADOS EN BLISTER&nbsp;</strong></font></center>\n\n<center><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong><img alt=\"FILM PROTECTOR PANTALLA IPHONE 3G\" src=\"http://www.mercadolibre.com.ar/jm/img?s=MLA&amp;f=39846695_1066.jpg&amp;v=P\" align=\"absMiddle\" border=\"0\"></strong></font></center>\n<center><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong>&nbsp;</strong></font></center>\n<center><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong><img alt=\"FILM PROTECTOR PANTALLA IPHONE 3G\" src=\"http://www.mercadolibre.com.ar/jm/img?s=MLA&amp;f=39846695_5350.jpg&amp;v=P\" align=\"absMiddle\" border=\"0\"></strong></font></center>\n<center>\n<ul>\n<font size=\"5\" color=\"#003399\" face=\"Verdana\"><li>\n<p style=\"margin-bottom: 0px;\" align=\"left\"><span lang=\"en-us\"><strong><font color=\"#0000cc\"><span style=\"font-weight: 700; font-family: Comic Sans MS;\">Custom made</span></font></strong></span><strong><font color=\"#0000cc\"><span style=\"font-weight: 700; font-family: Comic Sans MS;\" lang=\"en-us\"> for Apple 3G iPhone.</span></font></strong></p>\n</li><li>\n<p style=\"margin-bottom: 0px;\" align=\"left\"><strong><font color=\"#000000\" face=\"Comic Sans MS\"><span class=\"style9\">High quality thermo-plastic polymer (PET) material.</span></font></strong></p>\n</li><li>\n<p style=\"margin-bottom: 0px; word-spacing: 1px;\" align=\"left\"><span style=\"font-family: Comic Sans MS;\" lang=\"en-us\"><strong>Function:</strong></span></p>\n<div align=\"left\">\n\n<table id=\"table2\" style=\"margin: 0px; word-spacing: 0px; list-style-type: circle; text-align: left;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" height=\"0\" width=\"100%\">\n<tbody>\n<tr>\n<td>\n<p style=\"margin-bottom: 0px;\"><span style=\"font-family: Comic Sans MS;\" lang=\"en-us\">&nbsp;99% high transparency </span></p>\n<p style=\"margin-bottom: 0px;\"><span style=\"font-family: Comic Sans MS;\" lang=\"en-us\">&nbsp;UV protection</span></p>\n<p style=\"margin-bottom: 0px;\"><span style=\"font-family: Comic Sans MS;\" lang=\"en-us\">&nbsp;anti-glare</span></p>\n<p style=\"margin-bottom: 0px;\"><span style=\"font-family: Comic Sans MS;\" lang=\"en-us\">&nbsp;anti-scratch</span></p>\n<p style=\"margin-bottom: 0px;\"><span style=\"font-family: Comic Sans MS;\" lang=\"en-us\">&nbsp;anti-abrasion</span></p>\n<p style=\"margin-bottom: 0px;\"><span style=\"font-family: Comic Sans MS;\" lang=\"en-us\">&nbsp;anti-dust</span></p>\n<p style=\"margin-bottom: 0px;\"><span style=\"font-family: Comic Sans MS;\" lang=\"en-us\">&nbsp;fingerprint free</span></p></td></tr></tbody></table></div>\n\n</li><li>\n<p style=\"margin-bottom: 0px;\" align=\"left\"><span style=\"font-family: Comic Sans MS;\" lang=\"en-us\"><strong>Easy and quick to install.</strong></span></p>\n</li><li>\n<p style=\"margin-bottom: 0px;\" align=\"left\"><span style=\"font-family: Comic Sans MS;\" lang=\"en-us\"><strong>Removable without leaving residue.</strong></span></p>\n</li><li>\n<p style=\"margin-bottom: 0px;\" align=\"left\"><span style=\"font-family: Comic Sans MS;\" lang=\"en-us\"><strong>Free cleaning cloth.</strong></span></p>\n</li><li>\n<p style=\"margin-bottom: 0px;\" align=\"left\"><span style=\"font-family: Comic Sans MS;\" lang=\"en-us\"><strong><font color=\"#0000cc\">Package content: 1X LCD screen protectors.</font></strong></span></p>\n</li><li>\n<p style=\"margin-bottom: 0px;\" align=\"left\"><span style=\"font-family: Comic Sans MS;\" lang=\"en-us\"><strong>Accessory only.</strong></span></p></li></font></ul></center>\n<p style=\"margin-bottom: 0px;\" align=\"center\"><span style=\"font-family: Comic Sans MS;\" lang=\"en-us\"><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong>TAMBIEN TENEMOS TRANSPARENTE!!!!</strong></font></span></p>\n\n<p align=\"center\"><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong><img src=\"http://www.electronixplanet.net/banners/logo.gif\"></strong></font></p>\n<p align=\"center\"><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong><a href=\"http://eshops.mercadolibre.com.ar/electronixargentina/listado/IPOD_OrderId_BARATOS_DisplayType_G\"><img src=\"http://www.electronixplanet.net/banners/IPOD.gif\"></a></strong></font></p>\n', `updated_at` = '2010-02-16 16:00:00' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+
+
+Processing ItemController#show (for 200.42.23.2 at 2010-02-16 11:00:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mItem Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+  [4;36;1mCustomer Columns (0.3ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mCustomer Load (0.1ms)[0m   [0mSELECT * FROM `customers` WHERE (`customers`.`id` = 1) [0m
+Rendering item/show
+Completed in 46ms (View: 36, DB: 1) | 200 OK [http://ec2-184-73-6-124.compute-1.amazonaws.com/item/show/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mItem Update (0.4ms)[0m   [0;1mUPDATE `items` SET `description` = '<center>\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"700\">\n<tbody>\n<tr bgcolor=\"#000000\">\n<td colspan=\"3\" height=\"1\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td></tr>\n<tr bgcolor=\"#f0f0f0\">\n<td colspan=\"3\" height=\"10\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"10\" width=\"1\"></td></tr>\n<tr bgcolor=\"#f0f0f0\">\n<td width=\"10\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td valign=\"top\" width=\"120\"><img alt=\" IPHONE 3G FILM PROTECTOR DE PANTALLA ESPEJADO-TOUCH-NANO\" src=\"http://www.mercadolibre.com.ar/jm/img?s=MLA&amp;f=CAT_318700_1.jpg&amp;v=G\" height=\"110\" width=\"110\"></td>\n<td style=\"font-size: 12px; color: rgb(51, 51, 153); font-family: Arial;\">Pelicula protectora para proteger la pantalla de tu celular espejada cuando la pantalla está inactiva y transparente cuando está activa.</td></tr>\n<tr bgcolor=\"#f0f0f0\">\n<td colspan=\"3\" height=\"10\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"10\" width=\"1\"></td></tr>\n<tr>\n\n<td colspan=\"3\" height=\"10\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td></tr>\n<tr bgcolor=\"#fff38a\">\n<td><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td colspan=\"3\"><b style=\"color: rgb(44, 43, 51);\">Características</b></td></tr>\n<tr bgcolor=\"#dedede\">\n<td colspan=\"3\" height=\"1\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td></tr>\n<tr>\n<td colspan=\"3\" height=\"5\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td></tr></tbody></table></center>\n<center>\n<table id=\"DESC\" style=\"font-size: 11px; color: rgb(51, 51, 153); font-family: Arial;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"700\">\n<tbody>\n<tr>\n<td height=\"1\" width=\"10\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td width=\"120\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td width=\"5\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td width=\"220\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n\n<td width=\"5\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td width=\"10\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td width=\"120\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td width=\"5\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td width=\"220\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td width=\"5\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td></tr>\n<tr valign=\"top\">\n<td bgcolor=\"#f2f2f2\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td bgcolor=\"#f2f2f2\">Protector de pantalla:</td>\n<td><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td>Espejado</td>\n<td><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td bgcolor=\"#f2f2f2\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td bgcolor=\"#f2f2f2\"></td>\n<td><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n\n<td></td>\n<td><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td></tr>\n<tr bgcolor=\"#999999\">\n<td colspan=\"10\" height=\"1\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td></tr></tbody></table></center>\n', `updated_at` = '2010-02-16 16:04:18' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+
+
+Processing ItemController#show (for 200.42.23.2 at 2010-02-16 11:04:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mItem Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+  [4;36;1mCustomer Columns (0.3ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mCustomer Load (0.1ms)[0m   [0mSELECT * FROM `customers` WHERE (`customers`.`id` = 1) [0m
+Rendering item/show
+Completed in 52ms (View: 22, DB: 1) | 200 OK [http://ec2-184-73-6-124.compute-1.amazonaws.com/item/show/1]
+
+
+Processing ItemController#show (for 200.42.23.2 at 2010-02-16 11:04:34) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mItem Columns (16.7ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+  [4;36;1mCustomer Columns (0.3ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mCustomer Load (0.1ms)[0m   [0mSELECT * FROM `customers` WHERE (`customers`.`id` = 1) [0m
+Rendering item/show
+Completed in 154ms (View: 128, DB: 17) | 200 OK [http://ec2-184-73-6-124.compute-1.amazonaws.com/item/show/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItem Update (0.3ms)[0m   [0mUPDATE `items` SET `description` = 'hola tricio', `updated_at` = '2010-02-16 16:07:50' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+
+
+Processing ItemController#show (for 200.42.23.2 at 2010-02-16 11:07:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mItem Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+  [4;36;1mCustomer Columns (0.3ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mCustomer Load (0.1ms)[0m   [0mSELECT * FROM `customers` WHERE (`customers`.`id` = 1) [0m
+Rendering item/show
+Completed in 48ms (View: 13, DB: 1) | 200 OK [http://ec2-184-73-6-124.compute-1.amazonaws.com/item/show/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mItem Update (0.4ms)[0m   [0;1mUPDATE `items` SET `description` = '<center>\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"700\">\n<tbody>\n<tr bgcolor=\"#000000\">\n<td colspan=\"3\" height=\"1\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td></tr>\n<tr bgcolor=\"#f0f0f0\">\n<td colspan=\"3\" height=\"10\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"10\" width=\"1\"></td></tr>\n<tr bgcolor=\"#f0f0f0\">\n<td width=\"10\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td valign=\"top\" width=\"120\"><img alt=\" IPHONE 3G FILM PROTECTOR DE PANTALLA ESPEJADO-TOUCH-NANO\" src=\"http://www.mercadolibre.com.ar/jm/img?s=MLA&amp;f=CAT_318700_1.jpg&amp;v=G\" height=\"110\" width=\"110\"></td>\n<td style=\"font-size: 12px; color: rgb(51, 51, 153); font-family: Arial;\">Pelicula protectora para proteger la pantalla de tu celular espejada cuando la pantalla está inactiva y transparente cuando está activa.</td></tr>\n<tr bgcolor=\"#f0f0f0\">\n<td colspan=\"3\" height=\"10\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"10\" width=\"1\"></td></tr>\n<tr>\n\n<td colspan=\"3\" height=\"10\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td></tr>\n<tr bgcolor=\"#fff38a\">\n<td><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td colspan=\"3\"><b style=\"color: rgb(44, 43, 51);\">Características</b></td></tr>\n<tr bgcolor=\"#dedede\">\n<td colspan=\"3\" height=\"1\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td></tr>\n<tr>\n<td colspan=\"3\" height=\"5\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td></tr></tbody></table></center>\n<center>\n<table id=\"DESC\" style=\"font-size: 11px; color: rgb(51, 51, 153); font-family: Arial;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"700\">\n<tbody>\n<tr>\n<td height=\"1\" width=\"10\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td width=\"120\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td width=\"5\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td width=\"220\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n\n<td width=\"5\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td width=\"10\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td width=\"120\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td width=\"5\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td width=\"220\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td width=\"5\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td></tr>\n<tr valign=\"top\">\n<td bgcolor=\"#f2f2f2\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td bgcolor=\"#f2f2f2\">Protector de pantalla:</td>\n<td><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td>Espejado</td>\n<td><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td bgcolor=\"#f2f2f2\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td bgcolor=\"#f2f2f2\"></td>\n<td><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n\n<td></td>\n<td><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td></tr>\n<tr bgcolor=\"#999999\">\n<td colspan=\"10\" height=\"1\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td></tr></tbody></table></center>\n', `updated_at` = '2010-02-16 16:11:42' WHERE `id` = 1[0m
+  [4;35;1mSQL (29.2ms)[0m   [0mCOMMIT[0m
+
+
+Processing ItemController#show (for 200.42.23.2 at 2010-02-16 11:11:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mItem Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.5ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+  [4;36;1mCustomer Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mCustomer Load (0.1ms)[0m   [0mSELECT * FROM `customers` WHERE (`customers`.`id` = 1) [0m
+Rendering item/show
+Completed in 52ms (View: 13, DB: 2) | 200 OK [http://ec2-184-73-6-124.compute-1.amazonaws.com/item/show/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItem Update (0.8ms)[0m   [0mUPDATE `items` SET `description` = '<center>\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"700\">\n<tbody>\n<tr bgcolor=\"#000000\">\n<td colspan=\"3\" height=\"1\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td></tr>\n<tr bgcolor=\"#f0f0f0\">\n<td colspan=\"3\" height=\"10\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"10\" width=\"1\"></td></tr>\n<tr bgcolor=\"#f0f0f0\">\n<td width=\"10\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td valign=\"top\" width=\"120\"><img alt=\" IPHONE 3G FILM PROTECTOR DE PANTALLA ESPEJADO-TOUCH-NANO\" src=\"http://www.mercadolibre.com.ar/jm/img?s=MLA&amp;f=CAT_318700_1.jpg&amp;v=G\" height=\"110\" width=\"110\"></td>\n<td style=\"font-size: 12px; color: rgb(51, 51, 153); font-family: Arial;\">Pelicula protectora para proteger la pantalla de tu celular espejada cuando la pantalla est&aacute; inactiva y transparente cuando est&aacute; activa.</td></tr>\n<tr bgcolor=\"#f0f0f0\">\n<td colspan=\"3\" height=\"10\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"10\" width=\"1\"></td></tr>\n<tr>\n\n<td colspan=\"3\" height=\"10\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td></tr>\n<tr bgcolor=\"#fff38a\">\n<td><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td colspan=\"3\"><b style=\"color: rgb(44, 43, 51);\">Caracter&iacute;sticas</b></td></tr>\n<tr bgcolor=\"#dedede\">\n<td colspan=\"3\" height=\"1\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td></tr>\n<tr>\n<td colspan=\"3\" height=\"5\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td></tr></tbody></table></center>\n<center>\n<table id=\"DESC\" style=\"font-size: 11px; color: rgb(51, 51, 153); font-family: Arial;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"700\">\n<tbody>\n<tr>\n<td height=\"1\" width=\"10\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td width=\"120\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td width=\"5\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td width=\"220\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n\n<td width=\"5\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td width=\"10\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td width=\"120\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td width=\"5\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td width=\"220\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td width=\"5\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td></tr>\n<tr valign=\"top\">\n<td bgcolor=\"#f2f2f2\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td bgcolor=\"#f2f2f2\">Protector de pantalla:</td>\n<td><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td>Espejado</td>\n<td><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td bgcolor=\"#f2f2f2\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n<td bgcolor=\"#f2f2f2\"></td>\n<td><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td>\n\n<td></td>\n<td><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td></tr>\n<tr bgcolor=\"#999999\">\n<td colspan=\"10\" height=\"1\"><img src=\"http://www.mercadolibre.com.ar/org-img/t.gif\" border=\"0\" height=\"1\" width=\"1\"></td></tr></tbody></table></center>\n<center><br><br></center>\n<center><img style=\"width: 255px; height: 168px;\" src=\"http://www.electronixplanet.net/banners/httpwww.electronixplanet.netventaslogofin.jpg.jpg\" height=\"297\" width=\"261\"></center>\n<center>&nbsp;</center><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong>\n</strong></font><center><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong><font size=\"7\" color=\"#003399\" face=\"Verdana\"><strong>FILM</strong></font></strong></font></center>\n<center><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong><font size=\"7\" color=\"#000000\">ESPEJADO</font></strong></font></center>\n<center><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong>&nbsp;IPHONE 3ra Generacion</strong></font></center>\n<center><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong>&nbsp;</strong></font></center>\n<center><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong><img src=\"http://store.macnificos.com/ebay/plantillas/new_design/product/mirrorfilm2.jpg\" height=\"565\" width=\"549\"></strong></font></center>\n<center><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong>\n<p align=\"center\"><a href=\"http://eshops.mercadolibre.com.ar/electronixargentina/listado/IPOD_OrderId_BARATOS_DisplayType_G\"></a></p></strong></font><font color=\"#ff6600\">NO DEJA MARCAS DE DEDOS, </font></strong></font></center>\n\n<center><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong><font color=\"#ff6600\">NO RAYA</font></strong></font></center>\n<center><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong><font color=\"#ff6600\"></font>&nbsp;</strong></font></center>\n<center><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong><img alt=\"FILM PROTECTOR PANTALLA IPHONE 3G\" src=\"http://www.mercadolibre.com.ar/jm/img?s=MLA&amp;f=44604487_8258.jpg&amp;v=P\" align=\"absMiddle\" border=\"0\"></strong></font></center>\n<center><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong><font color=\"#ff6600\">CLARIDAD OPTIMA E INVISIBLE!</font></strong></font></center>\n<center><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong><font color=\"#ff6600\"></font>&nbsp;</strong></font></center>\n<center><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong><font size=\"1\"></font>&nbsp;</strong></font></center>\n<center><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong><img alt=\"FILM PROTECTOR PANTALLA IPHONE 3G\" src=\"http://www.mercadolibre.com.ar/jm/img?s=MLA&amp;f=39846695_7595.jpg&amp;v=P\" align=\"absMiddle\" border=\"0\"></strong></font></center>\n<center><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong>cortado y calado </strong></font></center>\n<center><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong>(RUEDA Y AUDIFONO)</strong></font></center>\n<center><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong>CON TOALLA DE GAMUZA</strong></font></center>\n<center><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong>CERRADOS EN BLISTER&nbsp;</strong></font></center>\n\n<center><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong><img alt=\"FILM PROTECTOR PANTALLA IPHONE 3G\" src=\"http://www.mercadolibre.com.ar/jm/img?s=MLA&amp;f=39846695_1066.jpg&amp;v=P\" align=\"absMiddle\" border=\"0\"></strong></font></center>\n<center><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong>&nbsp;</strong></font></center>\n<center><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong><img alt=\"FILM PROTECTOR PANTALLA IPHONE 3G\" src=\"http://www.mercadolibre.com.ar/jm/img?s=MLA&amp;f=39846695_5350.jpg&amp;v=P\" align=\"absMiddle\" border=\"0\"></strong></font></center>\n<center>\n<ul>\n<font size=\"5\" color=\"#003399\" face=\"Verdana\"><li>\n<p style=\"margin-bottom: 0px;\" align=\"left\"><span lang=\"en-us\"><strong><font color=\"#0000cc\"><span style=\"font-weight: 700; font-family: Comic Sans MS;\">Custom made</span></font></strong></span><strong><font color=\"#0000cc\"><span style=\"font-weight: 700; font-family: Comic Sans MS;\" lang=\"en-us\"> for Apple 3G iPhone.</span></font></strong></p>\n</li><li>\n<p style=\"margin-bottom: 0px;\" align=\"left\"><strong><font color=\"#000000\" face=\"Comic Sans MS\"><span class=\"style9\">High quality thermo-plastic polymer (PET) material.</span></font></strong></p>\n</li><li>\n<p style=\"margin-bottom: 0px; word-spacing: 1px;\" align=\"left\"><span style=\"font-family: Comic Sans MS;\" lang=\"en-us\"><strong>Function:</strong></span></p>\n<div align=\"left\">\n\n<table id=\"table2\" style=\"margin: 0px; word-spacing: 0px; list-style-type: circle; text-align: left;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" height=\"0\" width=\"100%\">\n<tbody>\n<tr>\n<td>\n<p style=\"margin-bottom: 0px;\"><span style=\"font-family: Comic Sans MS;\" lang=\"en-us\">&nbsp;99% high transparency </span></p>\n<p style=\"margin-bottom: 0px;\"><span style=\"font-family: Comic Sans MS;\" lang=\"en-us\">&nbsp;UV protection</span></p>\n<p style=\"margin-bottom: 0px;\"><span style=\"font-family: Comic Sans MS;\" lang=\"en-us\">&nbsp;anti-glare</span></p>\n<p style=\"margin-bottom: 0px;\"><span style=\"font-family: Comic Sans MS;\" lang=\"en-us\">&nbsp;anti-scratch</span></p>\n<p style=\"margin-bottom: 0px;\"><span style=\"font-family: Comic Sans MS;\" lang=\"en-us\">&nbsp;anti-abrasion</span></p>\n<p style=\"margin-bottom: 0px;\"><span style=\"font-family: Comic Sans MS;\" lang=\"en-us\">&nbsp;anti-dust</span></p>\n<p style=\"margin-bottom: 0px;\"><span style=\"font-family: Comic Sans MS;\" lang=\"en-us\">&nbsp;fingerprint free</span></p></td></tr></tbody></table></div>\n\n</li><li>\n<p style=\"margin-bottom: 0px;\" align=\"left\"><span style=\"font-family: Comic Sans MS;\" lang=\"en-us\"><strong>Easy and quick to install.</strong></span></p>\n</li><li>\n<p style=\"margin-bottom: 0px;\" align=\"left\"><span style=\"font-family: Comic Sans MS;\" lang=\"en-us\"><strong>Removable without leaving residue.</strong></span></p>\n</li><li>\n<p style=\"margin-bottom: 0px;\" align=\"left\"><span style=\"font-family: Comic Sans MS;\" lang=\"en-us\"><strong>Free cleaning cloth.</strong></span></p>\n</li><li>\n<p style=\"margin-bottom: 0px;\" align=\"left\"><span style=\"font-family: Comic Sans MS;\" lang=\"en-us\"><strong><font color=\"#0000cc\">Package content: 1X LCD screen protectors.</font></strong></span></p>\n</li><li>\n<p style=\"margin-bottom: 0px;\" align=\"left\"><span style=\"font-family: Comic Sans MS;\" lang=\"en-us\"><strong>Accessory only.</strong></span></p></li></font></ul></center>\n<p style=\"margin-bottom: 0px;\" align=\"center\"><span style=\"font-family: Comic Sans MS;\" lang=\"en-us\"><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong>TAMBIEN TENEMOS TRANSPARENTE!!!!</strong></font></span></p>\n\n<p align=\"center\"><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong><img src=\"http://www.electronixplanet.net/banners/logo.gif\"></strong></font></p>\n<p align=\"center\"><font size=\"5\" color=\"#003399\" face=\"Verdana\"><strong><a href=\"http://eshops.mercadolibre.com.ar/electronixargentina/listado/IPOD_OrderId_BARATOS_DisplayType_G\"><img src=\"http://www.electronixplanet.net/banners/IPOD.gif\"></a></strong></font></p>\n', `updated_at` = '2010-02-16 16:14:48' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+
+
+Processing ItemController#show (for 200.42.23.2 at 2010-02-16 11:14:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mItem Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+  [4;36;1mCustomer Columns (0.3ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mCustomer Load (0.1ms)[0m   [0mSELECT * FROM `customers` WHERE (`customers`.`id` = 1) [0m
+Rendering item/show
+Completed in 53ms (View: 23, DB: 1) | 200 OK [http://ec2-184-73-6-124.compute-1.amazonaws.com/item/show/1]
