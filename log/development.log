@@ -1457,3 +1457,7 @@ Processing ItemController#show (for 200.42.23.2 at 2010-02-16 11:14:59) [GET]
   [4;35;1mCustomer Load (0.1ms)[0m   [0mSELECT * FROM `customers` WHERE (`customers`.`id` = 1) [0m
 Rendering item/show
 Completed in 53ms (View: 23, DB: 1) | 200 OK [http://ec2-184-73-6-124.compute-1.amazonaws.com/item/show/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mCustomer Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mItem Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `items`[0m
