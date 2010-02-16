@@ -11,3 +11,9 @@ otra linea para probar
 def method
   puts "sarasa"
 end
+
+
+
+def methodOtro
+  puts "otro"
+end
