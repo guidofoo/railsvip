@@ -41,13 +41,13 @@ margin-left : 3px;
 </style>
 
 <script>
-var valItemId = "##ITEM_ID##";
+var valItemId = "123456789";
 var valItemSite = "MLA";
 var visualId = "STD";
 var urlBaseSite = "http://www.mercadolibre.com.ar/";
 var urlDefault = "http://www.mercadolibre.com.ar/argentina/ml/";
 var urlBase = "http://"+window.location.host;
-var oldUrl = "http://www.mercadolibre.com.ar/jm/item?site=MLA&id=##ITEM_ID##";
+var oldUrl = "http://www.mercadolibre.com.ar/jm/item?site=MLA&id=123456789";
 var urlLastCategPath = "";
 var categId= "##CATEG_ID##";
 var productId = "0";
@@ -73,7 +73,7 @@ var autocenterIsEnabled	= true;
 var loadingIsEnabled	= true;
 
 var cnt_width  = '790px';
-var cnt_src    = urlBase+'/jm/item?act=confirmBid&vip3=Y&id=##ITEM_ID##&site=MLA';
+var cnt_src    = urlBase+'/jm/item?act=confirmBid&vip3=Y&id=123456789&site=MLA';
 var img_src    = '/org-img/vip3/layer/loading230x180.gif';
 
 var loading_width  = '230px';
@@ -119,9 +119,11 @@ image.src = '/org-img/vip3/layer/loading230x180.gif';
 <!--##MENU## -->
 	<div class="BigContainer"> 
     <div id="pathcateg"> 
-      
-
-      <div class="breadcrumb"> ##CATEG_PATH## </div> 
+      <div class="backlist"> <span id="listButton" style="position: relative; width: 250px; height: 20px;"></span> </div>
+      <div class="breadcrumb">
+		<a class="path1" href="/org-img/html/MLA/1051.html">Celulares y Telefon&iacute;a</a><img src="/org-img/prod/arrow_categ.gif" border="0" height="10" width="13"><a class="path1" href="/jm/search?as_categ_id=3502">Accesorios para Celulares</a><img src="/org-img/prod/arrow_categ.gif" border="0" height="10" width="13"><a class="path1" href="/jm/search?as_categ_id=47540">Protectores de Pantalla</a><img src="/org-img/prod/arrow_categ.gif" border="0" height="10" width="13"><a class="path2" href="/jm/search?as_categ_id=70465">iPhone</a>
+	</div>  
+	</div> 
 
     </div> 
 
@@ -192,13 +194,13 @@ function moveToTope(){window.scroll(0,0);}
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
 <tr>
 <td width="16%" height="25">Precio:</td>
-<td width="84%" valign="middle"><span class="price"><span id="actPrice">##PRICE_SYMBOL## ##PRICE##</span></span><span class="fontGrey"> ##ITEM_TYPE##</span></td>
+<td width="84%" valign="middle"><span class="price">$ 798<span class="decimales">99</span></span></td>
 </tr>
 <tr>
 </tr>
 <tr>
 <td height="25">Ubicaci&oacute;n:</td>
-<td>##LOCATION##</td>
+<td>Capital Federal (Zona Alto Palermo)</td>
 </tr>
 
 <tr>
@@ -226,24 +228,24 @@ function moveToTope(){window.scroll(0,0);}
 </span>
 </div>
 <span class="font11" style="clear: both;"><div id="CalifPercentage" style="width: auto; clear: both;"><div id="puntos">Calificaci&oacute;n del vendedor: 
-	##SELLER_POINT## puntos
+	98 puntos
 </div>
 
 
 
 <div id="posneg"> 
     <div id="caja_pos"> 
-    	<span id="link_pos">(##POS_CALIF##%</span> 
+    	<span id="link_pos">(76%</span> 
 		<span id="img_pos" class="pos"></span>)
     </div>
     <div id="caja_neg"> 
-	<span id="link_neg">(##NEG_CALIF##%</span> 
+	<span id="link_neg">(24%</span> 
 	<span id="img_neg" class="neg"/></span>)
 	</div> 
 </div></div>
 <br>
 <div style="clear: both;">
-Ventas de este art&iacute;culo: ##BIDS_COUNT## <a href=""></a>
+Ventas de este art&iacute;culo: 18 <a href=""></a>
 </div>
 <br />
 </span></td>
@@ -254,7 +256,7 @@ Ventas de este art&iacute;culo: ##BIDS_COUNT## <a href=""></a>
 </tr>
 </table>
 </div>
-<div class="font11 denunhd">Publicaci&oacute;n ###ITEM_ID##</div>
+<div class="font11 denunhd">Publicaci&oacute;n #123456789</div>
 <div id="tabsN">
 	<ul id="description">
 		<li group="description" class="TabbedPanelsTab" id="current">
@@ -263,7 +265,7 @@ Ventas de este art&iacute;culo: ##BIDS_COUNT## <a href=""></a>
 	</ul>
 </div>
 <div id="descriptionCont">
-	<div class="contentbox" id="Descripción">##DESCRIPTION##<!----></div>
+	<div class="contentbox" id="Descripción"><%= @item.description %><!----></div>
 </div>
 </div>
 <!--   -->
