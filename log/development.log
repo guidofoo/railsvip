@@ -984,3 +984,343 @@ Processing ItemController#show (for 200.5.119.154 at 2010-02-15 13:47:34) [GET]
   [4;35;1mCustomer Load (0.2ms)[0m   [0mSELECT * FROM `customers` WHERE (`customers`.`id` = 1) [0m
 Rendering item/show
 Completed in 64ms (View: 29, DB: 2) | 200 OK [http://ec2-75-101-186-222.compute-1.amazonaws.com/item/show/1]
+
+
+Processing ItemController#show (for 200.42.23.2 at 2010-02-15 14:24:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mItem Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+  [4;36;1mCustomer Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mCustomer Load (0.2ms)[0m   [0mSELECT * FROM `customers` WHERE (`customers`.`id` = 1) [0m
+Rendering item/show
+Completed in 71ms (View: 44, DB: 2) | 200 OK [http://ec2-75-101-186-222.compute-1.amazonaws.com/item/show/1]
+
+
+Processing ItemController#show (for 200.42.23.2 at 2010-02-15 14:26:10) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mItem Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (22.0ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+  [4;36;1mCustomer Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mCustomer Load (0.2ms)[0m   [0mSELECT * FROM `customers` WHERE (`customers`.`id` = 1) [0m
+Rendering item/show
+Completed in 74ms (View: 40, DB: 24) | 200 OK [http://ec2-75-101-186-222.compute-1.amazonaws.com/item/show/1]
+
+
+Processing ItemController#show (for 200.42.23.2 at 2010-02-15 14:27:34) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mItem Columns (10.0ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+  [4;36;1mCustomer Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mCustomer Load (0.2ms)[0m   [0mSELECT * FROM `customers` WHERE (`customers`.`id` = 1) [0m
+Rendering item/show
+Completed in 211ms (View: 190, DB: 11) | 200 OK [http://ec2-75-101-186-222.compute-1.amazonaws.com/item/show/1]
+
+
+Processing ItemController#show (for 200.42.23.2 at 2010-02-15 14:28:34) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mItem Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.4ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+  [4;36;1mCustomer Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mCustomer Load (0.3ms)[0m   [0mSELECT * FROM `customers` WHERE (`customers`.`id` = 1) [0m
+Rendering item/show
+Completed in 70ms (View: 47, DB: 2) | 200 OK [http://ec2-75-101-186-222.compute-1.amazonaws.com/item/show/1]
+
+
+Processing ItemController#show (for 200.42.23.2 at 2010-02-15 14:30:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mItem Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+  [4;36;1mCustomer Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mCustomer Load (0.2ms)[0m   [0mSELECT * FROM `customers` WHERE (`customers`.`id` = 1) [0m
+Rendering item/show
+Completed in 66ms (View: 40, DB: 2) | 200 OK [http://ec2-75-101-186-222.compute-1.amazonaws.com/item/show/1]
+
+
+Processing ItemController#show (for 200.42.23.2 at 2010-02-15 14:33:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mItem Columns (34.4ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+  [4;36;1mCustomer Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mCustomer Load (0.2ms)[0m   [0mSELECT * FROM `customers` WHERE (`customers`.`id` = 1) [0m
+Rendering item/show
+Completed in 93ms (View: 47, DB: 36) | 200 OK [http://ec2-75-101-186-222.compute-1.amazonaws.com/item/show/1]
+
+
+Processing ItemController#show (for 200.42.23.2 at 2010-02-15 14:36:12) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mItem Columns (28.7ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+  [4;36;1mCustomer Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mCustomer Load (0.3ms)[0m   [0mSELECT * FROM `customers` WHERE (`customers`.`id` = 1) [0m
+Rendering item/show
+Completed in 89ms (View: 48, DB: 30) | 200 OK [http://ec2-75-101-186-222.compute-1.amazonaws.com/item/show/1]
+
+
+Processing ItemController#show (for 200.5.119.154 at 2010-02-15 14:40:14) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mItem Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+  [4;36;1mCustomer Columns (14.0ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mCustomer Load (0.2ms)[0m   [0mSELECT * FROM `customers` WHERE (`customers`.`id` = 1) [0m
+Rendering item/show
+Completed in 76ms (View: 34, DB: 15) | 200 OK [http://ec2-75-101-186-222.compute-1.amazonaws.com/item/show/1]
+
+
+Processing ItemController#show (for 200.5.119.154 at 2010-02-15 14:41:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mItem Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+  [4;36;1mCustomer Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mCustomer Load (0.2ms)[0m   [0mSELECT * FROM `customers` WHERE (`customers`.`id` = 1) [0m
+Rendering item/show
+Completed in 213ms (View: 191, DB: 2) | 200 OK [http://ec2-75-101-186-222.compute-1.amazonaws.com/item/show/1]
+
+
+Processing ItemController#show (for 200.5.119.154 at 2010-02-15 14:41:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mItem Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+  [4;36;1mCustomer Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mCustomer Load (0.3ms)[0m   [0mSELECT * FROM `customers` WHERE (`customers`.`id` = 1) [0m
+Rendering item/show
+Completed in 71ms (View: 37, DB: 2) | 200 OK [http://ec2-75-101-186-222.compute-1.amazonaws.com/item/show/1]
+
+
+Processing ItemController#show (for 200.42.23.2 at 2010-02-15 14:43:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mItem Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+  [4;36;1mCustomer Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mCustomer Load (0.2ms)[0m   [0mSELECT * FROM `customers` WHERE (`customers`.`id` = 1) [0m
+Rendering item/show
+Completed in 71ms (View: 48, DB: 2) | 200 OK [http://ec2-75-101-186-222.compute-1.amazonaws.com/item/show/1]
+
+
+Processing ItemController#show (for 200.42.23.2 at 2010-02-15 15:13:41) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mItem Columns (35.3ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+  [4;36;1mCustomer Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mCustomer Load (0.3ms)[0m   [0mSELECT * FROM `customers` WHERE (`customers`.`id` = 1) [0m
+Rendering item/show
+Completed in 90ms (View: 43, DB: 37) | 200 OK [http://ec2-75-101-186-222.compute-1.amazonaws.com/item/show/1]
+
+
+Processing ItemController#show (for 157.92.44.72 at 2010-02-15 15:25:34) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mItem Columns (33.0ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+  [4;36;1mCustomer Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mCustomer Load (0.2ms)[0m   [0mSELECT * FROM `customers` WHERE (`customers`.`id` = 1) [0m
+Rendering item/show
+Completed in 93ms (View: 48, DB: 34) | 200 OK [http://ec2-75-101-186-222.compute-1.amazonaws.com/item/show/1]
+
+
+Processing ItemController#show (for 200.5.119.154 at 2010-02-15 15:38:45) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mItem Columns (33.5ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+  [4;36;1mCustomer Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mCustomer Load (0.2ms)[0m   [0mSELECT * FROM `customers` WHERE (`customers`.`id` = 1) [0m
+Rendering item/show
+Completed in 91ms (View: 46, DB: 35) | 200 OK [http://ec2-75-101-186-222.compute-1.amazonaws.com/item/show/1]
+
+
+Processing ItemController#show (for 200.5.119.154 at 2010-02-16 07:17:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (40.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mItem Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+  [4;36;1mCustomer Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mCustomer Load (0.2ms)[0m   [0mSELECT * FROM `customers` WHERE (`customers`.`id` = 1) [0m
+Rendering item/show
+Completed in 62ms (View: 48, DB: 42) | 200 OK [http://ec2-75-101-186-222.compute-1.amazonaws.com/item/show/1]
+
+
+Processing ItemController#show (for 200.5.119.154 at 2010-02-16 07:37:42) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mItem Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+  [4;36;1mCustomer Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mCustomer Load (0.2ms)[0m   [0mSELECT * FROM `customers` WHERE (`customers`.`id` = 1) [0m
+Rendering item/show
+Completed in 94ms (View: 49, DB: 2) | 200 OK [http://ec2-75-101-186-222.compute-1.amazonaws.com/item/show/1]
+
+
+Processing ItemController#show (for 200.5.119.154 at 2010-02-16 07:37:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mItem Columns (10.8ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+  [4;36;1mCustomer Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mCustomer Load (0.2ms)[0m   [0mSELECT * FROM `customers` WHERE (`customers`.`id` = 1) [0m
+Rendering item/show
+Completed in 70ms (View: 47, DB: 12) | 200 OK [http://ec2-75-101-186-222.compute-1.amazonaws.com/item/show/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ActionController::Base#show (for 200.5.119.154 at 2010-02-16 08:09:55) [GET]
+  Parameters: {"id"=>"1"}
+
+NameError (uninitialized constant ApplicationController):
+  app/controllers/item_controller.rb:1
+
+Rendered rescues/_trace (92.2ms)
+Rendered rescues/_request_and_response (26.1ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ActionController::Base#show (for 200.5.119.154 at 2010-02-16 08:11:28) [GET]
+  Parameters: {"id"=>"1"}
+
+NameError (uninitialized constant ApplicationController):
+  app/controllers/item_controller.rb:1
+
+Rendered rescues/_trace (75.6ms)
+Rendered rescues/_request_and_response (2.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemController#show (for 200.5.119.154 at 2010-02-16 08:13:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mItem Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+  [4;36;1mCustomer Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mCustomer Load (0.3ms)[0m   [0mSELECT * FROM `customers` WHERE (`customers`.`id` = 1) [0m
+Rendering item/show
+Completed in 72ms (View: 27, DB: 2) | 200 OK [http://ec2-75-101-186-222.compute-1.amazonaws.com/item/show/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mItem Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mItem Create (0.3ms)[0m   [0;1mINSERT INTO `items` (`updated_at`, `titulo`, `customer_id`, `image`, `created_at`) VALUES('2010-02-16 13:15:46', NULL, NULL, NULL, '2010-02-16 13:15:46')[0m
+  [4;35;1mSQL (7.0ms)[0m   [0mCOMMIT[0m
+
+
+Processing ApplicationController#index (for 200.5.119.154 at 2010-02-16 08:44:24) [GET]
+
+
+ActionController::RoutingError (No route matches "/items/1" with {:method=>:get}):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ItemController#show (for 200.5.119.154 at 2010-02-16 08:44:28) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mItem Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+  [4;36;1mCustomer Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mCustomer Load (0.2ms)[0m   [0mSELECT * FROM `customers` WHERE (`customers`.`id` = 1) [0m
+Rendering item/show
+Completed in 65ms (View: 52, DB: 2) | 200 OK [http://ec2-75-101-186-222.compute-1.amazonaws.com/item/show/1]
+
+
+Processing ItemController#show (for 200.5.119.154 at 2010-02-16 10:02:10) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mItem Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+  [4;36;1mCustomer Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mCustomer Load (0.2ms)[0m   [0mSELECT * FROM `customers` WHERE (`customers`.`id` = 1) [0m
+Rendering item/show
+Completed in 97ms (View: 44, DB: 2) | 200 OK [http://ec2-75-101-186-222.compute-1.amazonaws.com/item/show/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCustomers (20100215180526)
+Migrating to CreateItems (20100215180752)
+Migrating to AddDescriptionToItem (20100216152131)
+  [4;36;1mSQL (41.9ms)[0m   [0;1mALTER TABLE `items` ADD `description` text[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100216152131')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `customers`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `customers`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `customers`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `items`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `items`[0m
