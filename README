@@ -7,3 +7,7 @@ otra linea
 
 el merge es una vergaaaaaa
 otra linea para probar
+
+def method
+  puts "sarasa"
+end
