@@ -192,13 +192,39 @@ Processing ItemController#show (for 200.5.119.154 at 2010-02-17 10:15:10) [GET]
   [4;35;1mCustomer Load (0.2ms)[0m   [0mSELECT * FROM `customers` WHERE (`customers`.`id` = 1) [0m
 Rendering item/show
 Completed in 73ms (View: 44, DB: 2) | 200 OK [http://ec2-75-101-186-222.compute-1.amazonaws.com/item/show/1?locale=es]
+<<<<<<< HEAD:log/development.log
+=======
+  [4;36;1mSQL (54.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE DATABASE `railsvip_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+>>>>>>> 3f9f386bca9c7c2bb5714c1b6550147289dfd561:log/development.log
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+<<<<<<< HEAD:log/development.log
   [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
   [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
   [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+=======
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (4.8ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (3.6ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+>>>>>>> 3f9f386bca9c7c2bb5714c1b6550147289dfd561:log/development.log
 Migrating to CreateCustomers (20100215180526)
+<<<<<<< HEAD:log/development.log
+=======
+  [4;35;1mSQL (2.1ms)[0m   [0mCREATE TABLE `customers` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nickname` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100215180526')[0m
+>>>>>>> 3f9f386bca9c7c2bb5714c1b6550147289dfd561:log/development.log
 Migrating to CreateItems (20100215180752)
+<<<<<<< HEAD:log/development.log
+=======
+  [4;35;1mSQL (1.6ms)[0m   [0mCREATE TABLE `items` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `image` varchar(255), `titulo` varchar(255), `customer_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (60.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100215180752')[0m
+>>>>>>> 3f9f386bca9c7c2bb5714c1b6550147289dfd561:log/development.log
 Migrating to AddDescriptionToItem (20100216152131)
+<<<<<<< HEAD:log/development.log
 Migrating to CreateSites (20100217152149)
   [4;36;1mSQL (21.9ms)[0m   [0;1mCREATE TABLE `sites` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `site_id` varchar(255), `locale` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
   [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100217152149')[0m
@@ -214,11 +240,29 @@ Migrating to CreateSites (20100217152149)
   [4;35;1mSQL (0.4ms)[0m   [0mSHOW FIELDS FROM `sites`[0m
   [4;36;1mSQL (0.3ms)[0m   [0;1mdescribe `sites`[0m
   [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `sites`[0m
+=======
+  [4;35;1mSQL (3.1ms)[0m   [0mALTER TABLE `items` ADD `description` text[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100216152131')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `customers`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `customers`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `items`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `items`[0m
+>>>>>>> 3f9f386bca9c7c2bb5714c1b6550147289dfd561:log/development.log
 
 
+<<<<<<< HEAD:log/development.log
 Processing ItemController#show (for 200.5.119.154 at 2010-02-17 10:34:52) [GET]
   Parameters: {"site_id"=>"MLA", "id"=>"1"}
+=======
+Processing CustomersController#index (for 200.5.119.154 at 2010-02-17 11:46:49) [GET]
+>>>>>>> 3f9f386bca9c7c2bb5714c1b6550147289dfd561:log/development.log
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+<<<<<<< HEAD:log/development.log
   [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
   [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM `sites` WHERE (site_id = 'MLA') LIMIT 1[0m
   [4;35;1mItem Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `items`[0m
@@ -375,12 +419,24 @@ SyntaxError (/root/railsvip/config/routes.rb:45: syntax error
 Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (85.0ms)
 Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (0.7ms)
 Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+=======
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mCustomer Load (0.3ms)[0m   [0;1mSELECT * FROM `customers` [0m
+Rendering template within layouts/customers
+Rendering customers/index
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://ec2-184-73-12-218.compute-1.amazonaws.com/customers]
+>>>>>>> 3f9f386bca9c7c2bb5714c1b6550147289dfd561:log/development.log
 
 
+<<<<<<< HEAD:log/development.log
 Processing ItemController#MLA (for 200.5.119.154 at 2010-02-17 10:42:02) [GET]
   Parameters: {"id"=>"1"}
+=======
+Processing CustomersController#new (for 200.5.119.154 at 2010-02-17 11:46:55) [GET]
+>>>>>>> 3f9f386bca9c7c2bb5714c1b6550147289dfd561:log/development.log
   [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+<<<<<<< HEAD:log/development.log
   [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM `sites` WHERE (site_id = NULL) LIMIT 1[0m
 
 
@@ -521,8 +577,15 @@ Processing ItemController#show (for 200.5.119.154 at 2010-02-17 10:44:48) [GET]
   [4;35;1mCustomer Load (0.1ms)[0m   [0mSELECT * FROM `customers` WHERE (`customers`.`id` = 1) [0m
 Rendering item/show
 Completed in 80ms (View: 47, DB: 2) | 200 OK [http://ec2-184-73-6-124.compute-1.amazonaws.com/MLB/item/1]
+=======
+  [4;35;1mCustomer Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `customers`[0m
+Rendering template within layouts/customers
+Rendering customers/new
+Completed in 13ms (View: 7, DB: 1) | 200 OK [http://ec2-184-73-12-218.compute-1.amazonaws.com/customers/new]
+>>>>>>> 3f9f386bca9c7c2bb5714c1b6550147289dfd561:log/development.log
 
 
+<<<<<<< HEAD:log/development.log
 Processing ItemController#show (for 200.5.119.154 at 2010-02-17 10:44:54) [GET]
   Parameters: {"site_id"=>"MLB", "id"=>"1"}
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
@@ -869,8 +932,12 @@ Completed in 101ms (View: 75, DB: 2) | 200 OK [http://ec2-184-73-6-124.compute-1
 
 Processing ItemController#show (for 200.5.119.154 at 2010-02-17 12:19:29) [GET]
   Parameters: {"site_id"=>"EBY", "id"=>"1"}
+=======
+Processing CustomersController#index (for 200.5.119.154 at 2010-02-17 11:46:58) [GET]
+>>>>>>> 3f9f386bca9c7c2bb5714c1b6550147289dfd561:log/development.log
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+<<<<<<< HEAD:log/development.log
   [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM `sites` WHERE (site_id = 'EBY') LIMIT 1[0m
   [4;35;1mSite Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `sites`[0m
   [4;36;1mItem Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
@@ -1162,3 +1229,9 @@ Processing ItemController#show (for 200.5.119.154 at 2010-02-17 12:49:36) [GET]
   [4;36;1mCustomer Load (0.1ms)[0m   [0;1mSELECT * FROM `customers` WHERE (`customers`.`id` = 1) [0m
 Rendering item/show
 Completed in 229ms (View: 43, DB: 2) | 200 OK [http://ec2-184-73-6-124.compute-1.amazonaws.com/MLB/item/1]
+=======
+  [4;36;1mCustomer Load (0.3ms)[0m   [0;1mSELECT * FROM `customers` [0m
+Rendering template within layouts/customers
+Rendering customers/index
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://ec2-184-73-12-218.compute-1.amazonaws.com/customers]
+>>>>>>> 3f9f386bca9c7c2bb5714c1b6550147289dfd561:log/development.log
