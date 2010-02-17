@@ -16,7 +16,11 @@ class ApplicationController < ActionController::Base
   before_filter :set_locale
   def set_locale
     # if params[:locale] is nil then I18n.default_locale will be used
-    locale = Site.first(:conditions => ["site_id = ?", params[:site_id]]).locale
+    if params[:site_id] != nil
+      locale = Site.first(:conditions => ["site_id = ?", params[:site_id]]).locale
+    else
+      locale = params[:locale]
+    end
     I18n.locale = locale
   end
 
