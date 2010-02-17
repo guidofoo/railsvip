@@ -15,3 +15,6 @@ config.action_controller.perform_caching             = false
 
 # Don't care if the mailer can't send
 config.action_mailer.raise_delivery_errors = false
+#Configuracion de memcached
+config.cache_store = :mem_cache_store, 'domU-12-31-39-0C-0A-07.compute-1.internal:11211','domU-12-31-39-0C-0A-07.compute-1.internal:11212', { :namespace => 'rails-vip' }
+

@@ -93,6 +93,7 @@ image.src = '/org-img/vip3/layer/loading230x180.gif';
 <div id="containall">
 	<!--##MENU## -->
 	<div class="under" id="contmenu"> 
+  <% cache(:key =>'vip_menu_der') do %> 
   <div class="menu_der"> 
     <div id="first_lnk_menu_der"><a href="/"><%=t :inicio %></a></div>
 	<script>setLog();</script> 
@@ -116,6 +117,7 @@ image.src = '/org-img/vip3/layer/loading230x180.gif';
     </div> 
   </div> 
 </div>
+<% end %>	
 <!--##MENU## -->
 	<div class="BigContainer"> 
     <div id="pathcateg"> 
@@ -126,7 +128,7 @@ image.src = '/org-img/vip3/layer/loading230x180.gif';
 	</div> 
 
     </div> 
-
+<% cache(:action=>'show', :action_suffix => "Item_ID_"+@item.id) %>
     <!-- PREHEADER --> 
     <div></div> 
     <!-- TITULO DEL ITEM --> 
@@ -268,6 +270,7 @@ function moveToTope(){window.scroll(0,0);}
 	<div class="contentbox" id="Descripción"><%= @item.description %><!----></div>
 </div>
 </div>
+<% end %>
 <!--   -->
     <div name="attr_help" class="LayerAyuda"><div  id='MLID' class="caja_ayu_gral" onMouseOut="javascript:delayHide();" onMouseOver="javascript:deleteDelayHide();">
 	<div class="caja_ayu_flecha"></div>
