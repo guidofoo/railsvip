@@ -3,9 +3,9 @@
 one:
   image: MyString
   titulo: MyString
-  customer: 
+  customer: <%= Customer.find(:all).first %>
 
 two:
   image: MyString
   titulo: MyString
-  customer: 
+  customer: <%= Customer.find(:all).first %>
