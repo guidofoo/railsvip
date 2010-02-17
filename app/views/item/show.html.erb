@@ -94,12 +94,12 @@ image.src = '/org-img/vip3/layer/loading230x180.gif';
 	<!--##MENU## -->
 	<div class="under" id="contmenu"> 
   <div class="menu_der"> 
-    <div id="first_lnk_menu_der"><a href="/">Inicio</a></div>
+    <div id="first_lnk_menu_der"><a href="/"><%=t :inicio %></a></div>
 	<script>setLog();</script> 
-    <div class="lnk_menu_der"><a href="/ayuda_home">Ayuda</a></div> 
-    <div class="lnk_menu_der"><a href="/jm/myML">Mi MercadoLibre</a></div> 
-    <div class="lnk_menu_der"><a href="/jm/sell">Vender</a></div> 
-    <div class="lnk_menu_der"><a target="_blank" href="/jm/reg">Reg&iacute;strate</a></div> 
+    <div class="lnk_menu_der"><a href="/ayuda_home"><%=t :ayuda %></a></div> 
+    <div class="lnk_menu_der"><a href="/jm/myML"><%=t :mi_ml %></a></div> 
+    <div class="lnk_menu_der"><a href="/jm/sell"><%=t :vender %></a></div> 
+    <div class="lnk_menu_der"><a target="_blank" href="/jm/reg"><%=t :registrate %></a></div> 
   </div> 
   <div class="borra"></div> 
   <div class="flota_izq"><a href="/"> 
@@ -193,13 +193,13 @@ function moveToTope(){window.scroll(0,0);}
 
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
 <tr>
-<td width="16%" height="25">Precio:</td>
+<td width="16%" height="25"><%=t :precio %>:</td>
 <td width="84%" valign="middle"><span class="price">$ 798<span class="decimales">99</span></span></td>
 </tr>
 <tr>
 </tr>
 <tr>
-<td height="25">Ubicaci&oacute;n:</td>
+<td height="25"><%=t :ubicacion %>:</td>
 <td>Capital Federal (Zona Alto Palermo)</td>
 </tr>
 
@@ -208,7 +208,7 @@ function moveToTope(){window.scroll(0,0);}
 <td height="25" valign=top><div id="endtxt2"><span class="font11Grey" id="endtxt3"></span></div>
 <div style="margin-top: 8px;"></div>
 <div class="purchase"><input type="button" id="BidButtonTop" class="but_pri_1" value="Comprar" title="Comprar"></div>
- <span class="font11">Tu compra est&aacute; protegida.</span></td>
+ <span class="font11"><%=t :tucompra %>.</span></td>
 </tr>
 </table>
 <div class="dashed"></div>
@@ -216,7 +216,7 @@ function moveToTope(){window.scroll(0,0);}
 <div class="box">
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
 <tbody><tr>
-<td style="padding-top: 2px;" valign="top" width="16%">Vendedor: </td>
+<td style="padding-top: 2px;" valign="top" width="16%"><%=t :vendedor %>: </td>
 <td class="datavend" valign="top" width="84%">
 
 <div><span id="Nickname">	<span id="MyNickname" style="margin-top: 5px; display: inline; float: left; padding-bottom: 2px;">
@@ -227,8 +227,8 @@ function moveToTope(){window.scroll(0,0);}
 </span><div style="clear: both;"></div>
 </span>
 </div>
-<span class="font11" style="clear: both;"><div id="CalifPercentage" style="width: auto; clear: both;"><div id="puntos">Calificaci&oacute;n del vendedor: 
-	98 puntos
+<span class="font11" style="clear: both;"><div id="CalifPercentage" style="width: auto; clear: both;"><div id="puntos">C<%=t :calificacion %>: 
+	98 <%=t :puntos %>
 </div>
 
 
@@ -245,7 +245,7 @@ function moveToTope(){window.scroll(0,0);}
 </div></div>
 <br>
 <div style="clear: both;">
-Ventas de este art&iacute;culo: 18 <a href=""></a>
+<%=t :ventas %>: 18 <a href=""></a>
 </div>
 <br />
 </span></td>
@@ -256,7 +256,7 @@ Ventas de este art&iacute;culo: 18 <a href=""></a>
 </tr>
 </table>
 </div>
-<div class="font11 denunhd">Publicaci&oacute;n #123456789</div>
+<div class="font11 denunhd"><%=t :publicacion %> #123456789</div>
 <div id="tabsN">
 	<ul id="description">
 		<li group="description" class="TabbedPanelsTab" id="current">
@@ -330,10 +330,10 @@ Ventas de este art&iacute;culo: 18 <a href=""></a>
     
     
   </div> 
-  <div class="footer_reng"><a href="http://www.mercadolibre.com.ar/argentina/ml/org_theme.p_main?as_theme_id=NEW_SOBRE_ML">Sobre MercadoLibre</a> | <a href="http://www.mercadolibre.com.ar/sitemap.html">Mapa del Sitio</a> | <a href="http://www.mercadolibre.com.ar/seguro_home.html">Pol&iacute;ticas</a> | <a href="http://www.mercadolibre.com.ar/argentina/ml/p_loadhtml?as_menu=CSEG&amp;as_html_code=CSEG01">Centro de Seguridad</a> | <a href="http://www.mercadopago.com/argentina/ml/p_loadhtml?as_menu=M06S03&amp;as_html_code=PROTECCION_COMPRADOR">Programa de Protecci&oacute;n al Comprador</a> | <a href="http://opinion.mercadolibre.com.ar">Opiniones y Cat&aacute;logo</a></div> 
+  <div class="footer_reng"><a href="http://www.mercadolibre.com.ar/argentina/ml/org_theme.p_main?as_theme_id=NEW_SOBRE_ML"><%=t :sobre_ml %></a> | <a href="http://www.mercadolibre.com.ar/sitemap.html"><%=t :mapa %></a> | <a href="http://www.mercadolibre.com.ar/seguro_home.html"><%=t :politicas %></a> | <a href="http://www.mercadolibre.com.ar/argentina/ml/p_loadhtml?as_menu=CSEG&amp;as_html_code=CSEG01"><%=t :centro %></a> | <a href="http://www.mercadopago.com/argentina/ml/p_loadhtml?as_menu=M06S03&amp;as_html_code=PROTECCION_COMPRADOR"><%=t :programa %></a> | <a href="http://opinion.mercadolibre.com.ar"><%=t :opiniones %></a></div> 
   
-<div align="center" class="footer_reng"><b>Argentina</b> | <a href="http://www.mercadolivre.com.br">Brasil</a> | <a href="http://www.mercadolibre.com.co">Colombia</a> | <a href="http://www.mercadolibre.co.cr">Costa Rica</a> | <a href="http://www.mercadolibre.cl">Chile</a> | <a href="/jm/ml.track.me?k1=FOOT&amp;k2=EBAY&amp;go=http://www.ebay.com/">eBay</a> | <a href="http://www.mercadolibre.com.ec">Ecuador</a> | <a href="http://www.mercadolibre.com.mx">M&eacute;xico</a> | <a href="http://www.mercadolibre.com.pa">Panam&aacute;</a> | <a href="http://www.mercadolibre.com.pe">Per&uacute;</a> | 
-  <a href="http://www.mercadolibre.com.do">Rep. Dominicana</a> | <a href="http://www.mercadolibre.com.uy">Uruguay</a> | <a href="http://www.mercadolibre.com.ve">Venezuela</a></div>
+<div align="center" class="footer_reng"><b><%=t :argentina %></b> | <a href="http://www.mercadolivre.com.br"><%=t :brasil %></a> | <a href="http://www.mercadolibre.com.co"><%=t :colombia %></a> | <a href="http://www.mercadolibre.co.cr"><%=t :costarica %></a> | <a href="http://www.mercadolibre.cl"><%=t :chile %></a> | <a href="/jm/ml.track.me?k1=FOOT&amp;k2=EBAY&amp;go=http://www.ebay.com/"><%=t :ebay %></a> | <a href="http://www.mercadolibre.com.ec"><%=t :ecuador %></a> | <a href="http://www.mercadolibre.com.mx"><%=t :mexico %></a> | <a href="http://www.mercadolibre.com.pa"><%=t :panama %></a> | <a href="http://www.mercadolibre.com.pe"><%=t :peru %></a> | 
+  <a href="http://www.mercadolibre.com.do"><%=t :repdominicana %></a> | <a href="http://www.mercadolibre.com.uy"><%=t :uruguay %></a> | <a href="http://www.mercadolibre.com.ve"><%=t :venezuela %></a></div>
 <div id="footer_fin">El uso de este sitio web implica la aceptaci&oacute;n de los <a target="_blank" href="http://www.mercadolibre.com.ar/seguro_terminos.html">T&eacute;rminos y Condiciones</a> y de las <a href="http://www.mercadolibre.com.ar/org-img/html/MLA/seguro_privacidad.html">Pol&iacute;ticas de Privacidad</a> de MercadoLibre S.A.<br> 
     Copyright &copy; 1999-2010 MercadoLibre S.A.</div> 
 </div>

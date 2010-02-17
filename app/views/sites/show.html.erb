@@ -1,0 +1,13 @@
+<p>
+  <b>Site:</b>
+  <%=h @site.site_id %>
+</p>
+
+<p>
+  <b>Locale:</b>
+  <%=h @site.locale %>
+</p>
+
+
+<%= link_to 'Edit', edit_site_path(@site) %> |
+<%= link_to 'Back', sites_path %>

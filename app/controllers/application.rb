@@ -16,7 +16,17 @@ class ApplicationController < ActionController::Base
   before_filter :set_locale
   def set_locale
     # if params[:locale] is nil then I18n.default_locale will be used
-    I18n.locale = params[:locale]
+    locale = Site.first(:conditions => ["site_id = ?", params[:site_id]]).locale
+    I18n.locale = locale
   end
 
+  after_filter :set_charset
+
+  def set_charset
+    content_type = headers["Content-Type"] || 'text/html'
+    if /^text\//.match(content_type)
+      headers["Content-Type"] = "#{content_type}; charset=ISO-8859-1" 
+    end
+  end
+  
 end
